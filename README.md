@@ -1,31 +1,3 @@
-# Attention: Incorrect virus detection
-**Some (really) stupid idiots seem to have abused PS2EXE to compile their computer virus scripts. As a result, a rapidly growing number of virus scanners recognize programs created with PS2EXE as malicious programs and delete them.**
-
-**There is only one hope to save the PS2EXE project: Please send your (harmless) programs created with PS2EXE via the web forms from the virus scanners' vendors for reporting false positives (I've already done it with some of them, please use only the false positive page)!**
-
-**If this is not successful, then I will have to quit PS2EXE as nobody can use it anymore.**
-
-**Thank you for your support**
-
-# PS2EXE
-Overworking of the great script of Ingo Karstein with GUI support. The GUI output and input is activated with one switch, real windows executables are generated. With Powershell 5.x support and graphical front end.
-
-Module version.
-
-You find the script based version here (https://github.com/MScholtes/TechNet-Gallery) and here: [PS2EXE-GUI: "Convert" PowerShell Scripts to EXE Files with GUI](https://gallery.technet.microsoft.com/PS2EXE-GUI-Convert-e7cb69d5).
-
-Author: Markus Scholtes
-
-Version: 1.0.11
-
-Date: 2021-11-21
-
-## Installation
-
-```powershell
-PS C:\> Install-Module ps2exe
-```
-(on Powershell V4 you may have to install PowershellGet before) or download from here: https://www.powershellgallery.com/packages/ps2exe/.
 
 ## Usage
 ```powershell
@@ -145,51 +117,4 @@ ipconfig | Out-String
 $Host.UI.RawUI.FlushInputBuffer()
 ```
 
-## Changes:
-### 1.0.11 / 2021-11-21
-- fixed password longer than 24 characters error
-- new parameter -DPIAware to support scaling in noConsole mode
-- new parameter -exitOnCancel to stop program execution on cancel in input boxes (only in noConsole mode)
 
-### 1.0.10 / 2021-04-10
-- parameter outputFile now accepts a target folder (without filename)
-
-### 1.0.9 / 2021-02-28
-- new parameter UNICODEEncoding to output as UNICODE
-- changed parameter debug to prepareDebug
-- finally dared to use advanced parameters
-
-### 1.0.8 / 2020-10-24
-- refactored
-
-### 1.0.7 / 2020-08-21
-- bug fix for simultanous progress bars in one pipeline
-
-### 1.0.6 / 2020-08-10
-- prompt for choice behaves like Powershell now (console mode only)
-- (limited) support for Powershell Core (starts Windows Powershell in the background)
-- fixed processing of negative parameter values
-- support for animated progress bars (noConsole mode only)
-
-### 1.0.5 / 2020-07-11
-- support for nested progress bars (noConsole mode only)
-
-### 1.0.4 / 2020-04-19
-- Application.EnableVisualStyles() as default for GUI applications, new parameter -noVisualStyles to prevent this
-
-### 1.0.3 / 2020-02-15
-- converted files from UTF-16 to UTF-8 to allow git diff
-
-- ignore control keys in secure string request in console mode
-
-### 1.0.2 / 2020-01-08
-- added examples to github
-
-### 1.0.1 / 2019-12-16
-- fixed "unlimited window width for GUI windows" issue in ps2exe.ps1 and Win-PS2EXE
-
-### 1.0.0 / 2019-11-08
-- first stable module version
-
-### 0.0.0 / 2019-09-15
-- experimental
